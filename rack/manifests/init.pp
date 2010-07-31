@@ -1,6 +1,6 @@
 class rack {
   package{'rack':
-    ensure => installed,
+    ensure => $rack_version,
     provider => 'gem',
   }
 }
