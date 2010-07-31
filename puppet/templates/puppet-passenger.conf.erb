@@ -37,7 +37,7 @@ Listen <%= port %>
        
         ErrorLog /var/log/<%= scope.lookupvar('apache::params::apache_name') %>/<%= name %>_error.log
         LogLevel warn
-        CustomLog /var/log/<%= scope.lookupvar('apache::params::apache_nbame') %>/<%= name %>_access.log combined
+        CustomLog /var/log/<%= scope.lookupvar('apache::params::apache_name') %>/<%= name %>_access.log combined
         ServerSignature On
 
 </VirtualHost>
