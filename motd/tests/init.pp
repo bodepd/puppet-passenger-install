@@ -1,0 +1,2 @@
+$testdata='foo'
+include motd
