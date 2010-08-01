@@ -12,11 +12,11 @@
 #
 
 class puppet::passenger {
-  include ruby::dev
-  include apache::ssl
-  include ::passenger
+  require ruby::dev
+  require apache::ssl
+  require ::passenger
   include passenger::params
-  include ::rack
+  require ::rack
 
   $passenger_version=$passenger::params::version
   $gem_path=$passenger::params::gem_path
