@@ -40,5 +40,6 @@ class apache {
     recurse => true,
     purge => true,
     notify => Service['httpd'],
+    require => Package['httpd'],
   } 
 }
