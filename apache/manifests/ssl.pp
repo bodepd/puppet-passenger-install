@@ -24,6 +24,7 @@ class apache::ssl {
         # I don't want this purged.
         file { "${apache::params::vdir}/ssl.conf":
           ensure => present,
+          require => Package[$apache::params::ssl_package],
         }
      }
      'ubuntu', 'debian': {
