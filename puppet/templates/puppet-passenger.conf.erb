@@ -18,8 +18,8 @@ Listen <%= port %>
         SSLEngine on
         SSLProtocol -ALL +SSLv3 +TLSv1
         SSLCipherSuite ALL:!ADH:RC4+RSA:+HIGH:+MEDIUM:-LOW:-SSLv2:-EXP
-        SSLCertificateFile      /var/lib/puppet/ssl/certs/<%= certname %>.pem
-        SSLCertificateKeyFile   /var/lib/puppet/ssl/private_keys/<%= certname %>.pem
+        SSLCertificateFile      /var/lib/puppet/ssl/certs/<%= my_certname %>.pem
+        SSLCertificateKeyFile   /var/lib/puppet/ssl/private_keys/<%=my_certname %>.pem
         SSLCertificateChainFile /var/lib/puppet/ssl/certs/ca.pem
         SSLCACertificateFile    /var/lib/puppet/ssl/certs/ca.pem
         SSLVerifyClient optional
