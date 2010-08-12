@@ -23,6 +23,8 @@ class apache {
     ensure    => running,
     enable    => true,
     subscribe => Package['httpd'],
+    hasstatus => true,
+    hasrestart => true,
   }
   #
   # May want to purge all none realize modules using the resources resource type.
