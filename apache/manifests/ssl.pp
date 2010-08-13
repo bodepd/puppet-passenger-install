@@ -24,7 +24,9 @@ class apache::ssl {
         # I don't want this purged.
         file { "${apache::params::vdir}/ssl.conf":
           ensure => present,
+          source => 'puppet:///modules/apache/ssl.conf',
           require => Package[$apache::params::ssl_package],
+          notify => Service['httpd'],
         }
      }
      'ubuntu', 'debian': {
