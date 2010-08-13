@@ -28,6 +28,7 @@ class apache::params {
        $ssl_package = 'mod_ssl'
        $apache_dev  = 'httpd-devel'
        $vdir = '/etc/httpd/conf.d/'
+       $conf_file = '/etc/httpd/conf/httpd.conf'
     }
     'ubuntu', 'debian': {
        $apache_name = 'apache2'

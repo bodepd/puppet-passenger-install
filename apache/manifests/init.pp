@@ -44,4 +44,13 @@ class apache {
     notify => Service['httpd'],
     require => Package['httpd'],
   } 
+
+  file { $apache::params::conf_file:
+    owner => 'apache',
+    group => 'apache',
+    mode => '0644',
+    source => 'puppet:///modules/apache/httpd.conf',
+    notify => Service['httpd'],
+    require => Package['httpd'],
+  }
 }
